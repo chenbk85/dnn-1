@@ -14,6 +14,7 @@
 			);
 			dependencies = (
 				42A160C516B87E2F0007755C /* PBXTargetDependency */,
+				425D10C0198928DC0082C0BA /* PBXTargetDependency */,
 			);
 			name = all;
 			productName = all;
@@ -22,10 +23,19 @@
 
 /* Begin PBXBuildFile section */
 		421ADE3D197BEA1B007EDE79 /* libea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421ADE3C197BEA1B007EDE79 /* libea.a */; };
-		42A1609316B82FDB0007755C /* all_ones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F4EE6916AEE845000123A4 /* all_ones.cpp */; };
+		425D10B7198928B70082C0BA /* libea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421ADE3C197BEA1B007EDE79 /* libea.a */; };
+		425D10BE198928D50082C0BA /* dnn_developmental.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425D10BD198928D50082C0BA /* dnn_developmental.cpp */; };
+		42A1609316B82FDB0007755C /* dnn_direct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F4EE6916AEE845000123A4 /* dnn_direct.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		425D10BF198928DC0082C0BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4244196715859482009863BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 425D10B3198928B70082C0BA;
+			remoteInfo = "dnn-developmental";
+		};
 		42A160C416B87E2F0007755C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4244196715859482009863BE /* Project object */;
@@ -36,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		425D10B8198928B70082C0BA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		42F4EE6216AEE80D000123A4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,14 +68,24 @@
 
 /* Begin PBXFileReference section */
 		421ADE3C197BEA1B007EDE79 /* libea.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libea.a; path = ../ealib/build/Debug/libea.a; sourceTree = "<group>"; };
-		421ADE3E197BEA48007EDE79 /* all_ones.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = all_ones.cfg; sourceTree = "<group>"; };
 		42441B3E15862E1B009863BE /* Jamroot */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jamroot; sourceTree = "<group>"; };
+		425D10B2198928A30082C0BA /* pole.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = pole.cfg; sourceTree = "<group>"; };
+		425D10BC198928B70082C0BA /* dnn-developmental */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "dnn-developmental"; sourceTree = BUILT_PRODUCTS_DIR; };
+		425D10BD198928D50082C0BA /* dnn_developmental.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dnn_developmental.cpp; sourceTree = "<group>"; };
 		42706B11166AF51C003FB2E3 /* template.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = template.xcconfig; sourceTree = "<group>"; };
-		42F4EE6616AEE80D000123A4 /* template-all-ones */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "template-all-ones"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42F4EE6916AEE845000123A4 /* all_ones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = all_ones.cpp; sourceTree = "<group>"; };
+		42F4EE6616AEE80D000123A4 /* dnn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dnn; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F4EE6916AEE845000123A4 /* dnn_direct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dnn_direct.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		425D10B6198928B70082C0BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425D10B7198928B70082C0BA /* libea.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42F4EE5E16AEE80D000123A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,7 +111,8 @@
 		4244197115859482009863BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42F4EE6616AEE80D000123A4 /* template-all-ones */,
+				42F4EE6616AEE80D000123A4 /* dnn */,
+				425D10BC198928B70082C0BA /* dnn-developmental */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +129,8 @@
 		42441A01158613F5009863BE /* src */ = {
 			isa = PBXGroup;
 			children = (
-				42F4EE6916AEE845000123A4 /* all_ones.cpp */,
+				425D10BD198928D50082C0BA /* dnn_developmental.cpp */,
+				42F4EE6916AEE845000123A4 /* dnn_direct.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -107,7 +138,7 @@
 		42441A7A15861669009863BE /* etc */ = {
 			isa = PBXGroup;
 			children = (
-				421ADE3E197BEA48007EDE79 /* all_ones.cfg */,
+				425D10B2198928A30082C0BA /* pole.cfg */,
 				42706B11166AF51C003FB2E3 /* template.xcconfig */,
 			);
 			path = etc;
@@ -116,9 +147,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42F4EE5B16AEE80D000123A4 /* template-all-ones */ = {
+		425D10B3198928B70082C0BA /* dnn-developmental */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "template-all-ones" */;
+			buildConfigurationList = 425D10B9198928B70082C0BA /* Build configuration list for PBXNativeTarget "dnn-developmental" */;
+			buildPhases = (
+				425D10B4198928B70082C0BA /* Sources */,
+				425D10B6198928B70082C0BA /* Frameworks */,
+				425D10B8198928B70082C0BA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dnn-developmental";
+			productName = "ocr-single";
+			productReference = 425D10BC198928B70082C0BA /* dnn-developmental */;
+			productType = "com.apple.product-type.tool";
+		};
+		42F4EE5B16AEE80D000123A4 /* dnn-direct */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "dnn-direct" */;
 			buildPhases = (
 				42F4EE5C16AEE80D000123A4 /* Sources */,
 				42F4EE5E16AEE80D000123A4 /* Frameworks */,
@@ -128,9 +176,9 @@
 			);
 			dependencies = (
 			);
-			name = "template-all-ones";
+			name = "dnn-direct";
 			productName = "ocr-single";
-			productReference = 42F4EE6616AEE80D000123A4 /* template-all-ones */;
+			productReference = 42F4EE6616AEE80D000123A4 /* dnn */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +189,7 @@
 			attributes = {
 				ORGANIZATIONNAME = "Michigan State University";
 			};
-			buildConfigurationList = 4244196A15859482009863BE /* Build configuration list for PBXProject "template" */;
+			buildConfigurationList = 4244196A15859482009863BE /* Build configuration list for PBXProject "dnn" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -154,26 +202,40 @@
 			projectRoot = "";
 			targets = (
 				42720F6F163823AF008C8E63 /* all */,
-				42F4EE5B16AEE80D000123A4 /* template-all-ones */,
+				42F4EE5B16AEE80D000123A4 /* dnn-direct */,
+				425D10B3198928B70082C0BA /* dnn-developmental */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		425D10B4198928B70082C0BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425D10BE198928D50082C0BA /* dnn_developmental.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42F4EE5C16AEE80D000123A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A1609316B82FDB0007755C /* all_ones.cpp in Sources */,
+				42A1609316B82FDB0007755C /* dnn_direct.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		425D10C0198928DC0082C0BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 425D10B3198928B70082C0BA /* dnn-developmental */;
+			targetProxy = 425D10BF198928DC0082C0BA /* PBXContainerItemProxy */;
+		};
 		42A160C516B87E2F0007755C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 42F4EE5B16AEE80D000123A4 /* template-all-ones */;
+			target = 42F4EE5B16AEE80D000123A4 /* dnn-direct */;
 			targetProxy = 42A160C416B87E2F0007755C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -189,6 +251,18 @@
 		4244197915859482009863BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42706B11166AF51C003FB2E3 /* template.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		425D10BA198928B70082C0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		425D10BB198928B70082C0BA /* Release */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
@@ -220,11 +294,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4244196A15859482009863BE /* Build configuration list for PBXProject "template" */ = {
+		4244196A15859482009863BE /* Build configuration list for PBXProject "dnn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4244197815859482009863BE /* Debug */,
 				4244197915859482009863BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425D10B9198928B70082C0BA /* Build configuration list for PBXNativeTarget "dnn-developmental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425D10BA198928B70082C0BA /* Debug */,
+				425D10BB198928B70082C0BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -238,7 +321,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "template-all-ones" */ = {
+		42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "dnn-direct" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42F4EE6416AEE80D000123A4 /* Debug */,
