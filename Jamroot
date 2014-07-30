@@ -8,11 +8,11 @@ project
 use-project /libea : ../ealib/libea ;
 use-project /libann : ../ealib/libann ;
 
-exe dnn :
-    src/dnn.cpp
+exe dnn-direct :
+    src/dnn_direct.cpp
     /libea//libea_runner
     /libann//libann
     : <include>./include <link>static
     ;
 
-install dist : dnn : <location>$(HOME)/bin ;
+install dist : dnn-direct : <location>$(HOME)/bin ;
